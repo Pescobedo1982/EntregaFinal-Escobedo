@@ -1,9 +1,9 @@
 const ver = document.querySelector(".first");
 const noVer = document.querySelector(".hidden");
-const usuario = document.querySelector(".mail").value;
+const usuario = document.querySelector(".mail").value
 
 document.querySelector(".entrar").addEventListener("click", () => {
-    document.querySelector(".comprador").innerHTML = "Bienvenido" + usuario + "A Chantun";
+    document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantun";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
 
