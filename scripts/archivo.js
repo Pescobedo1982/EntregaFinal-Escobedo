@@ -1,11 +1,13 @@
 const ver = document.querySelector(".first");
 const noVer = document.querySelector(".hidden");
 const usuario = document.querySelector(".mail").value
+let fechaHora = new Date()
 
 document.querySelector(".entrar").addEventListener("click", () => {
     document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantún";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
+    document.querySelector(".reloj").innerHTML = fechaHora
 
 });
 
