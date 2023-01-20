@@ -3,7 +3,7 @@ const noVer = document.querySelector(".hidden");
 const usuario = document.querySelector(".mail").value
 
 document.querySelector(".entrar").addEventListener("click", () => {
-    document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantun";
+    document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantún";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
 
@@ -51,7 +51,7 @@ terminarCompra.addEventListener("click", () => {
                     let timerInterval
                     Swal.fire({
                         title: 'Se está transfiriendo su dinero!',
-                        html: 'Se reiniciara <b></b> segundos.',
+                        html: 'Se reiniciara en <b></b> segundos.',
                         timer: 2000,
                         timerProgressBar: true,
                         didOpen: () => {
@@ -74,7 +74,7 @@ terminarCompra.addEventListener("click", () => {
                     
                 }),
                     Swal.fire(
-                        document.querySelector("#billetera").innerHTML = "Usted tiene " + compra + " dolares Mep",
+                        document.querySelector("#billetera").innerHTML = "Usted tiene " + compra + " dólares Mep",
                         terminarCompra.disabled = true
 
 
