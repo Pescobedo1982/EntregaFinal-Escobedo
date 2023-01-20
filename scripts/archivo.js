@@ -49,25 +49,40 @@ terminarCompra.addEventListener("click", () => {
                 button.innerText = 'retirar dólares y reiniciar compra';
                 document.body.appendChild(button)
                 button.addEventListener("click", () => {
-                    location.reload()}),
-                Swal.fire(
-                    document.querySelector("#billetera").innerHTML = "Usted tiene " + compra + " dolares Mep",
-                    'Usted a Comprado ' + compra + ' Dólares Mep',
-                    terminarCompra.disabled = true
-
-            
-                
-                )
+          let timerInterval;
+          Swal.fire({
+            title: "Se está transfiriendo su dinero!",
+            html: "Se reiniciara la aplicación en <b></b> segundos.",
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading();
+              const b = Swal.getHtmlContainer().querySelector("b");
+              timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft();
+              }, 100);
+            },
+            willClose: () => {
+              clearInterval(timerInterval);
+            },
+          }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+              console.log("I was closed by the timer");
             }
-            else if (true) {
-                document.querySelector("#billetera").innerHTML = "Usted cancelo la compra."
-
-            }
-        })
-
-    }
-
+          });
+          location.reload();
+        }),
+          Swal.fire(
+            (document.querySelector("#billetera").innerHTML =
+              "Usted tiene " + compra + " dolares Mep"),
+            "Usted a Comprado " + compra + " Dólares Mep",
+            (terminarCompra.disabled = true)
+          );
+      } else if (true) {
+        document.querySelector("#billetera").innerHTML =
+          "Usted cancelo la compra.";
+      }
+    });
+  }
 });
-
-  
-
