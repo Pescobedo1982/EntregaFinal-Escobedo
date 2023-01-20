@@ -53,7 +53,7 @@ terminarCompra.addEventListener("click", () => {
           Swal.fire({
             title: "Se está transfiriendo su dinero!",
             html: "Se reiniciara la aplicación en <b></b> segundos.",
-            timer: 2000,
+            timer: 4000,
             timerProgressBar: true,
             didOpen: () => {
               Swal.showLoading();
