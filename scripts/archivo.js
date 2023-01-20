@@ -53,14 +53,14 @@ terminarCompra.addEventListener("click", () => {
           Swal.fire({
             title: "Se está transfiriendo su dinero!",
             html: "Se reiniciara la aplicación en <b></b> segundos.",
-            timer: 4000,
+            timer: 6000,
             timerProgressBar: true,
             didOpen: () => {
               Swal.showLoading();
               const b = Swal.getHtmlContainer().querySelector("b");
               timerInterval = setInterval(() => {
                 b.textContent = Swal.getTimerLeft();
-              }, 100);
+              }, 300);
             },
             willClose: () => {
               clearInterval(timerInterval);
