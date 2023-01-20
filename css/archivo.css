@@ -1,0 +1,27 @@
+body{
+    background-color: green;
+    text-align: center;
+}
+.first{
+    text-align: center;
+    color: antiquewhite;
+    display: none;
+    
+}
+#total{
+    font-size: 20px;
+    color: black;
+}
+
+.comprador{
+    font-size: 40px;
+    color: rgb(252, 80, 0);
+    margin: 20px;
+}
+
+ h3{
+    color: beige;
+ }
+ h1{
+    color: darkorange;
+ }
