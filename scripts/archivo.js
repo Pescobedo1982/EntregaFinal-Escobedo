@@ -1,13 +1,24 @@
-const ver = document.querySelector(".first");
-const noVer = document.querySelector(".hidden");
-const usuario = document.querySelector(".mail").value
-let fechaHora = new Date()
+
+
 
 document.querySelector(".entrar").addEventListener("click", () => {
+const ver = document.querySelector(".first");
+const noVer = document.querySelector(".hidden");
+const usuario = document.querySelector(".name").value
+let bError = false
+    if(usuario ==''){
+        bError = true
+        Swal.fire(
+            "Debes ingresar tu nombre",
+          )
+        
+    } else {
     document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantún";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
     document.querySelector(".reloj").innerHTML = fechaHora
+    }
+    
 
 });
 
@@ -92,3 +103,4 @@ terminarCompra.addEventListener("click", () => {
     }
 
 });
+
