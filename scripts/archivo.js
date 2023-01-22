@@ -3,6 +3,8 @@ document.querySelector(".entrar").addEventListener("click", () => {
 const ver = document.querySelector(".first");
 const noVer = document.querySelector(".hidden");
 const usuario = document.querySelector(".name").value
+const enJSON = JSON.stringify(usuario);
+localStorage.setItem("usuario", enJSON);
 const edad = document.querySelector(".age").value
 
 let bError = false
@@ -31,8 +33,6 @@ let bError = false
 });
 
 const dolarMep = [{}, { id: 1, nombre: "MEP", precio: 305 }];
-const enJSON = JSON.stringify(dolarMep);
-sessionStorage.setItem("dolarMep", enJSON);
 
 let comprarMep = document.querySelector("#input1")
 
