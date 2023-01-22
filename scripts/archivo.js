@@ -16,7 +16,7 @@ let bError = false
     }
    
     else {
-    document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantún";
+    document.querySelector(".comprador").innerHTML = "Bienvenido " + enJSON + " A Chantún";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
       Swal.fire({
