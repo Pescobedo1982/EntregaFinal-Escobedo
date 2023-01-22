@@ -17,7 +17,14 @@ let bError = false
     document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantún";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
-    document.querySelector(".reloj").innerHTML = fechaHora
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Entrada exitosa',
+        showConfirmButton: false,
+        timer: 2000
+      })
+
     }
     
 
