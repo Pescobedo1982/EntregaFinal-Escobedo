@@ -1,18 +1,19 @@
 
-
-
 document.querySelector(".entrar").addEventListener("click", () => {
 const ver = document.querySelector(".first");
 const noVer = document.querySelector(".hidden");
 const usuario = document.querySelector(".name").value
+const edad = document.querySelector(".age").value
+
 let bError = false
-    if(usuario ==''){
+    if(usuario =='' || edad < 18 ){
         bError = true
         Swal.fire(
-            "Debes ingresar tu nombre",
+            "Revisa si completaste tus datos correctamente, recuerda que debes ser mayor de 18 años",
           )
-        
-    } else {
+    }
+   
+    else {
     document.querySelector(".comprador").innerHTML = "Bienvenido " + usuario + " A Chantún";
     document.querySelector(".first"), ver.style.display = "block"
     document.querySelector(".hidden"), noVer.style.display = "none"
@@ -103,4 +104,3 @@ terminarCompra.addEventListener("click", () => {
     }
 
 });
-
